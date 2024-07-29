@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "quickspirit"
+version = "1.0.0"
+description = "Fast & Async Network & File Downloader Client In Python"
+authors = ["DroidZed <41507665+DroidZed@users.noreply.github.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [
+  { include = "quick_spirit_http" },
+  { include = "quick_spirit_downloader" },
+]
+package-mode = true
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.27.0"
+aiofiles = { version = "^24.1.0", optional = true }
+
+[tool.poetry.extras]
+downloader = ["aiofiles"]
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.8.0"
+ruff = "^0.5.5"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.2"
+pytest-httpx = "^0.30.0"
+pytest-asyncio = "^0.23.8"
+pytest-aiofiles = "^0.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest]
+minversion = 6.0
+addopts = "-ra -q"
+testpaths = ["tests"]
+asyncio_mode = "strict"
