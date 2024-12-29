@@ -32,7 +32,7 @@ class HttpAsyncClient:
             url_params: Optional URL parameters to include in the request.
 
         Returns:
-            A Result instance representing either the JSON response body as a dictionary or list,
+            A Result instance representing either the RAW response body
             or a RequestError if there was an error.
 
         Raises:
@@ -60,10 +60,7 @@ class HttpAsyncClient:
 
                 response.raise_for_status()
 
-                if response.headers["content-type"] != "application/json":
-                    return Result(Data={"message": "Ok"}, Error=None)
-
-                return Result(Data=response.json(), Error=None)
+                return Result(Data=response.read(), Error=None)
 
         except HTTPStatusError as exec:
             error_message = f"Endpoint returned: {exec.response.text}\n"
