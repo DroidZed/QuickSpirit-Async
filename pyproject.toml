@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "quickspirit"
 version = "1.0.0"
-description = "Fast & Async Network & File Downloader Client In Python"
+description = "Fast, Async Network & File Downloader Client In Python"
 authors = ["DroidZed <41507665+DroidZed@users.noreply.github.com>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
