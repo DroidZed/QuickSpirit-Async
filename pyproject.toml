@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "quickspirit"
-version = "1.0.0"
+version = "1.0.2"
 description = "Fast, Async Network & File Downloader Client In Python"
 authors = ["DroidZed <41507665+DroidZed@users.noreply.github.com>"]
 license = "GPL-3.0-or-later"
@@ -10,6 +10,19 @@ packages = [
   { include = "quick_spirit_downloader" },
 ]
 package-mode = true
+classifiers = [
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python",
+]
+
+[project]
+dynamic = [ "classifiers" ]
+
+[project.urls]
+repository = "https://github.com/DroidZed/QuickSpirit-Async"
+homepage = "https://github.com/DroidZed/QuickSpirit-Async"
 
 [tool.poetry.dependencies]
 python = "^3.11"
