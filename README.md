@@ -6,7 +6,7 @@ This library was made with the famous [HTTPX](https://www.python-httpx.org/) lib
 
 I originally intended to make a small module to refactor my networking layer in my apps using httpx, and ended up creating a library !
 
---
+----
 
 ## Install
 
