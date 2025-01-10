@@ -46,6 +46,3 @@ Run the tests with pytest (install it first using your package manager of choice
 pytest -vs .
 ```
 
-## License
-
-This project is under the GPL 3.0 License. See [Corresponding file](/LICENSE)

@@ -1,10 +1,4 @@
 [tool.poetry]
-name = "quickspirit"
-version = "1.0.2"
-description = "Fast, Async Network & File Downloader Client In Python"
-authors = ["DroidZed <41507665+DroidZed@users.noreply.github.com>"]
-license = "GPL-3.0-or-later"
-readme = "README.md"
 packages = [
   { include = "quick_spirit_http" },
   { include = "quick_spirit_downloader" },
@@ -18,24 +12,30 @@ classifiers = [
 ]
 
 [project]
+name = "quickspirit"
+description = "Fast, Async Network & File Downloader Client In Python"
+version = "1.0.3"
 dynamic = [ "classifiers" ]
+license = { file = "LICENSE" }
+readme = "README.md"
+authors = [{name = "DroidZed", email = "41507665+DroidZed@users.noreply.github.com"}]
+keywords = ["api", "speed", "fast", "library", "networking"]
+requires-python = ">=3.9"
+dependencies = [
+  "httpx>=0.27.0",
+  "aiofiles>=24.1.0"
+]
 
 [project.urls]
 repository = "https://github.com/DroidZed/QuickSpirit-Async"
 homepage = "https://github.com/DroidZed/QuickSpirit-Async"
 
-[tool.poetry.dependencies]
-python = "^3.11"
-httpx = "^0.27.0"
-aiofiles = { version = "^24.1.0" }
-
-[tool.poetry.extras]
+[project.optional-dependencies]
 downloader = ["aiofiles"]
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.8.0"
 ruff = "^0.5.5"
-
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.2"
@@ -52,3 +52,4 @@ minversion = 6.0
 addopts = "-ra -q"
 testpaths = ["tests"]
 asyncio_mode = "strict"
+
