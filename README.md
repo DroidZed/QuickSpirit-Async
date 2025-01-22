@@ -1,4 +1,4 @@
-# Quick Spirit
+# Quick Spirit 🐬
 
 An easy to use HTTP client with a fast downloader.
 
