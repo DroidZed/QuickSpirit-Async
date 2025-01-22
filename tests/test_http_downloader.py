@@ -1,6 +1,6 @@
 import pytest
 
-from ..downloader import HttpAsyncDownloader
+from quickspirit import HttpAsyncDownloader
 
 
 class TestHttpDownloader:

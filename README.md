@@ -24,6 +24,37 @@ poetry add quickspirit
 uv add quickspirit
 ```
 
+## Usage:
+
+The library's getter function returns a bytes data repersenting the bytes coming in from the network. Since we don't know the shape of the data, I delegated the responsibility to you to figure out how to parse it to your liking.
+
+A sample code would look like this:
+
+```py
+from quickspirit import HttpAsyncClient
+from asyncio import run
+from json import joads
+from typing import Any
+
+async def main():
+    result = await HttpAsyncClient().get("https://some distant url returning json hopefully")
+
+    if result.Error:
+        raise result.Error
+
+
+    data: dict[str, Any] = loads(result.Data)
+
+    # do whatever you need now that you have the data...
+
+
+if __name__ == "__main__":
+    run(main())
+
+```
+
+A complete example can be found in the `example` directory.
+
 ## Testing:
 
 Clone with git:

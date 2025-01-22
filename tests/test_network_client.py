@@ -3,7 +3,7 @@ from typing import Any
 from dataclasses import dataclass
 from json import loads
 
-from ..http import HttpAsyncClient
+from quickspirit import HttpAsyncClient
 
 
 @dataclass
