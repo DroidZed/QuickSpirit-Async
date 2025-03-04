@@ -7,4 +7,4 @@ from .http_errors import RequestError
 @dataclass
 class Result:
     Error: Optional[RequestError]
-    Data: bytes
+    Data: Optional[bytes]

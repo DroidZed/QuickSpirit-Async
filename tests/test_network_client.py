@@ -57,6 +57,7 @@ class TestNetworkClient:
         data = await client.get("https://animechan.io/api/v1/quotes/random")
 
         assert data.Error is None
+        assert data.Data is not None
 
         content: Quote = Quote(loads(data.Data))
 

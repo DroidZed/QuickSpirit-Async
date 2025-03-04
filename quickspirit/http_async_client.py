@@ -21,6 +21,7 @@ class HttpAsyncClient:
         json: Optional[Dict[str, Any]] = None,
         headers: Optional[Dict[str, str]] = None,
         url_params: Optional[Dict[str, Any]] = None,
+        files: Optional[Dict[str, Any]] = None,
     ) -> Result:
         """Make an HTTP request using the specified method.
 
@@ -56,6 +57,7 @@ class HttpAsyncClient:
                         json=json,
                         headers=headers,
                         params=url_params,
+                        files=files,
                     )
 
                 response.raise_for_status()
@@ -97,6 +99,7 @@ class HttpAsyncClient:
         json: Optional[Dict[str, Any]] = None,
         headers: Optional[Dict[str, str]] = None,
         url_params: Optional[Dict[str, Any]] = None,
+        files: Optional[Dict[str, Any]] = None,
     ) -> Result:
         """Make an HTTP POST request.
 
@@ -116,6 +119,7 @@ class HttpAsyncClient:
             json=json,
             headers=headers,
             url_params=url_params,
+            files=files,
         )
 
     async def put(
@@ -125,6 +129,7 @@ class HttpAsyncClient:
         json: Optional[Dict[str, Any]] = None,
         headers: Optional[Dict[str, str]] = None,
         url_params: Optional[Dict[str, Any]] = None,
+        files: Optional[Dict[str, Any]] = None,
     ) -> Result:
         """Make an HTTP PUT request.
 
@@ -144,6 +149,7 @@ class HttpAsyncClient:
             json=json,
             headers=headers,
             url_params=url_params,
+            files=files,
         )
 
     async def patch(
@@ -153,6 +159,7 @@ class HttpAsyncClient:
         json: Optional[Dict[str, Any]] = None,
         headers: Optional[Dict[str, str]] = None,
         url_params: Optional[Dict[str, Any]] = None,
+        files: Optional[Dict[str, Any]] = None,
     ) -> Result:
         """Make an HTTP PATCH request.
 
@@ -172,6 +179,7 @@ class HttpAsyncClient:
             json=json,
             headers=headers,
             url_params=url_params,
+            files=files,
         )
 
     async def delete(
